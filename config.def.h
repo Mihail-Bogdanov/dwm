@@ -15,11 +15,21 @@ static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
 static const char col_cyan[]        = "#575b70";
 static const char col_border[]	    = "#575b70";
+static const unsigned int baralpha = 0xd8;
+static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
 	[SchemeSel]  = { col_gray4, col_cyan,  col_border  },
 };
+
+static const unsigned int alphas[][3]	= {
+	/*		 fg	 bg	   border     */
+	[SchemeNorm] = { OPAQUE, baralpha, borderalpha },
+	[SchemeSel]  = { OPAQUE, baralpha, borderalpha },
+};
+
+
 
 /* tagging */
 /*static const char *tags[] = { "α", "β", "γ", "δ", "ε", "ζ", "η", "θ", "λ", }; */
@@ -69,15 +79,21 @@ static const char *lockcmd[] = { "slock", NULL };
 static const char *filecmd[] = { "st", "-e", "ranger", NULL };
 static const char *sttermcmd[] = { "st", NULL };
 static const char *pcmancmd[] = { "pcmanfm", NULL };
+static const char *htopcmd[] = { "st", "htop" };
+static const char *browsercmd[] = { "firefox", NULL };
+static const char *keepasscmd[] = { "keepassxc", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
-	{ MODKEY,                       XK_b,      spawn,          {.v = brwcmd } },                                
+	{ MODKEY,                       XK_e,      spawn,          {.v = brwcmd } },                                
 	{ MODKEY,   			XK_z,      spawn,	   {.v = lockcmd} },
+	{ MODKEY,			XK_r,	   spawn,	   {.v = htopcmd} },
+	{ MODKEY|ShiftMask,			XK_k,      spawn,	   {.v = keepasscmd} },
 	{ MODKEY|ShiftMask,             XK_f,	   spawn,          {.v = filecmd} },
 	{ MODKEY,			XK_Return, spawn,	   {.v = sttermcmd} },
+	{ MODKEY,			XK_b,      spawn,	   {.v = browsercmd} },
 	{ MODKEY,			XK_f,	   spawn,	   {.v = pcmancmd} },
 	{ MODKEY|ShiftMask,             XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
