@@ -1,4 +1,4 @@
-/* See LICENSE file for copyright and license details. */
+/* My custom dwm 'fork'' */
 
 /* appearance */
 static const unsigned int borderpx  = 2;        /* border pixel of windows */
