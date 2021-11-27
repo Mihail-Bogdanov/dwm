@@ -1,4 +1,4 @@
-/* See LICENSE file for copyright and license details. */
+/* My custom dwm 'fork'' */
 
 /* appearance */
 static const unsigned int borderpx  = 2;        /* border pixel of windows */
@@ -90,7 +90,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_e,      spawn,          {.v = brwcmd } },                                
 	{ MODKEY,   			XK_z,      spawn,	   {.v = lockcmd} },
 	{ MODKEY,			XK_r,	   spawn,	   {.v = htopcmd} },
-	{ MODKEY|ShiftMask,			XK_k,      spawn,	   {.v = keepasscmd} },
+	{ MODKEY|ShiftMask,		XK_k,      spawn,	   {.v = keepasscmd} },
 	{ MODKEY|ShiftMask,             XK_f,	   spawn,          {.v = filecmd} },
 	{ MODKEY,			XK_Return, spawn,	   {.v = sttermcmd} },
 	{ MODKEY,			XK_b,      spawn,	   {.v = browsercmd} },
