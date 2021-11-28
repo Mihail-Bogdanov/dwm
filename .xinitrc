@@ -52,7 +52,7 @@ fi
 #exec ratpoison
 
 #panel (hopefully will work#
-/home/mihail/.config/panel.sh &
+~/.config/panel.sh &
 
 #keyboard layout#
 setxkbmap it &
@@ -65,12 +65,7 @@ exec xidlehook --not-when-audio --timer 300 '/usr/local/bin/slock' '' &
 picom -f &
 
 #wallpaper
-feh --bg-scale /usr/share/backgrounds/Morskie\ Oko.jpg &
-
-#panel
-#watch -n 1 ./.config/panel.sh &
-#NOT WORKING####
-
+feh --bg-scale /usr/share/backgrounds/wallpaper.jpg &
 
 #restart dwm without exiting
 while true; do
