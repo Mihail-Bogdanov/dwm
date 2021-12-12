@@ -6,11 +6,6 @@
 # associative array to store paths as basename values
 declare -A PATHS
 
-# check we have required software
-if ! hash awk find grep dmenu &>/dev/null; then
-    echo -e "ERROR: This script requires: awk find grep dmenu" && exit 1
-fi
-
 main() {
     # base file name storage
     local names=""
