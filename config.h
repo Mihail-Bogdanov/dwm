@@ -1,4 +1,4 @@
-/* My personal dwm fork */
+/* See LICENSE file for copyright and license details. */
 
 /* appearance */
 static const unsigned int borderpx  = 2;        /* border pixel of windows */
@@ -17,13 +17,14 @@ static const char col_gray1[]       = "#131c26";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
-static const char col_cyan[]        = "#575b70";
+static const char col_cyan[]        = "#303a45";
+static const char col_border[]	    = "#313945";
 static const unsigned int baralpha = 0xd0;
 static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+	[SchemeSel]  = { col_gray4, col_cyan,  col_border },
 };
 static const unsigned int alphas[][3]      = {
 	/*               fg      bg        border     */
@@ -59,15 +60,15 @@ static const Layout layouts[] = {
 	{ "|M|",      centeredmaster },
 	{ "[M]",      monocle },
 	{ "[\\]",     dwindle },
-	{ "H[]",      deck },
+/*	{ "H[]",      deck },
 	{ "TTT",      bstack },
-	{ "===",      bstackhoriz },
-	{ "HHH",      grid },
-	{ "###",      nrowgrid },
+	{ "===",      bstackhoriz }, */
+	{ "###",      grid },
+/*	{ "HHH",      nrowgrid },
 	{ "---",      horizgrid },
 	{ ":::",      gaplessgrid },
 	{ "[@]",      spiral },
-	{ ">M>",      centeredfloatingmaster },
+	{ ">M>",      centeredfloatingmaster }, */
 	{ "><>",      NULL },    /* no layout function means floating behavior */
 	{ NULL,       NULL },
 };
