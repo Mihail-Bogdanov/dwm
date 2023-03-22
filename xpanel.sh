@@ -6,7 +6,7 @@ while true; do
 	KERNEL=$(echo " : `echo $(uname -r)`")
 	UPDATES=$(echo " : `echo $(checkupdates | wc -l)`")
 	UPTIME=$(echo "`echo $(uptime -p)`  ")
-	WIFILINE=$(echo " : `echo $(iw dev wlan0 info | grep ssid | awk '{print $2}')`")
+	WIFILINE=$(echo " : `echo $(systemctl is-active --quiet NetworkManager && echo Connected)`")
 
 	xsetroot -name "  $BATTERYLINE  |  $TIME  |  $KERNEL  |  $UPDATES  |  $WIFILINE  |  $UPTIME "
 
