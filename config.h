@@ -110,7 +110,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_f,	   spawn,          {.v = pcmcmd } },
 	{ MODKEY,			XK_w,	   spawn,          {.v = htopcmd } },
 	{ MODKEY,			XK_b,	   spawn,          {.v = browsercmd } },
-	{ MODKEY|ShiftMask,		XK_c,	   spawn,          {.v = clockcmd } },
+	{ MODKEY,			XK_c,	   spawn,          {.v = clockcmd } },
 	{ MODKEY|ShiftMask,		XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
