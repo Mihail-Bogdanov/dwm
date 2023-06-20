@@ -8,7 +8,7 @@ while true; do
 	UPTIME=$(echo "`echo $(uptime -p)`  ")
 	WIFILINE=$(echo " : `echo $(systemctl is-active --quiet NetworkManager && echo Connected)`")
 
-	xsetroot -name "  $BATTERYLINE  |  $TIME  |  $KERNEL  |  $UPDATES  |  $WIFILINE  |  $UPTIME "
+	xsetroot -name "  $TIME  |  $KERNEL  |  $UPDATES  |  $WIFILINE  |  $UPTIME "
 
 	sleep 1	
 
